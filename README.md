@@ -27,6 +27,8 @@ This project helped me learn:
 - CSS
 - JavaScript
 
+## 🔗 Live Preview - https://tic-tac-toe-by-tk.netlify.app/ 
+
 ## 📌 Project Purpose
 This project was created to strengthen my understanding of:
 - JavaScript fundamentals
@@ -45,3 +47,5 @@ This project was created to strengthen my understanding of:
 
 ---
 Built with logic, learning, and lots of debugging 💻🔥
+<br>
+Author - Toufique Ahmed Khan
