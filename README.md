@@ -45,7 +45,7 @@ This project was created to strengthen my understanding of:
 - Add sound effects 🔊
 - Online multiplayer support 🌍
 
-----
+---
 Built with logic, learning, and lots of debugging 💻🔥
 <br>
 Author - Toufique Ahmed Khan
