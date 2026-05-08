@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #6d3b07 0%, #926441 50%, #bf9270 100%);
+  text-align: center;
+  font-family: 'Georgia', serif;
+  min-height: 100vh;
+  color: #ffeddb;
+}
+
+main h1 {
+  padding: 2rem 0;
+  font-size: 3rem;
+  color: #ffeddb;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.container {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1.5vmin;
+  padding: 2vmin;
+  background: rgba(237, 205, 187, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(109, 59, 7, 0.3);
+  border: 2px solid rgba(255, 237, 219, 0.2);
+}
+
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 4px 15px rgba(109, 59, 7, 0.3);
+  font-size: 8vmin;
+  color: #6d3b07;
+  background: linear-gradient(145deg, #ffeddb, #edcdbb);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  border: 2px solid rgba(191, 146, 112, 0.3);
+}
+
+.box:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(109, 59, 7, 0.4);
+  background: linear-gradient(145deg, #edcdbb, #e3b7a0);
+  border-color: rgba(191, 146, 112, 0.5);
+}
+
+.box:disabled {
+  cursor: not-allowed;
+}
+
+.box:active:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+#reset-btn {
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  background: linear-gradient(145deg, #926441, #6d3b07);
+  color: #ffeddb;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(109, 59, 7, 0.4);
+  margin-top: 2rem;
+  font-weight: bold;
+  border: 2px solid rgba(255, 237, 219, 0.2);
+}
+
+#reset-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(109, 59, 7, 0.5);
+  background: linear-gradient(145deg, #6d3b07, #926441);
+  border-color: rgba(255, 237, 219, 0.3);
+}
+
+#new-btn {
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  background: linear-gradient(145deg, #bf9270, #926441);
+  color: #ffeddb;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(146, 100, 65, 0.4);
+  font-weight: bold;
+  border: 2px solid rgba(255, 237, 219, 0.2);
+}
+
+#new-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(146, 100, 65, 0.5);
+  background: linear-gradient(145deg, #926441, #bf9270);
+  border-color: rgba(255, 237, 219, 0.3);
+}
+
+#msg {
+  color: #ffeddb;
+  font-size: 5vmin;
+  text-shadow: 2px 2px 4px rgba(109, 59, 7, 0.6);
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.msg-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+  background: linear-gradient(135deg, #6d3b07 0%, #926441 50%, #bf9270 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.hide {
+  display: none;
+}
+
+/* Add subtle animation to the title */
+@keyframes titleGlow {
+  0%, 100% { text-shadow: 2px 2px 4px rgba(109, 59, 7, 0.4); }
+  50% { text-shadow: 2px 2px 8px rgba(255, 237, 219, 0.3); }
+}
+
+main h1 {
+  animation: titleGlow 3s ease-in-out infinite;
+}
